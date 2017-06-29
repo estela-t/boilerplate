@@ -17,6 +17,7 @@ gulp.task('styles', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./public/styles/'))
+    .pipe(reload({stream: true}))
 });
 
 gulp.task("scripts", () => {
